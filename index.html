@@ -4,6 +4,70 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>TALACENT — Executive Recruitment</title>
+
+<!-- SEO META TAGS -->
+<meta name="description" content="Talacent is a corporate executive recruitment firm founded in Brisbane in 2024. We place senior leaders across Financial Services, Technology, Life Sciences, Industrial, Consumer & Retail, and Professional Services — across Australia and globally." />
+<meta name="keywords" content="executive recruitment, executive search, senior recruitment, Brisbane recruitment, Melbourne recruitment, C-suite search, board recruitment, talent advisory, RPO" />
+<meta name="author" content="Talacent" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.talacent.com.au/" />
+
+<!-- OPEN GRAPH (LinkedIn, Facebook, Slack previews) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.talacent.com.au/" />
+<meta property="og:title" content="TALACENT — Executive Recruitment" />
+<meta property="og:description" content="Placing leaders who matter. A corporate recruitment firm built for the companies redrawing the lines of their industries." />
+<meta property="og:image" content="https://www.talacent.com.au/og-image.jpg" />
+<meta property="og:site_name" content="Talacent" />
+
+<!-- TWITTER / X CARD -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@talacent" />
+<meta name="twitter:title" content="TALACENT — Executive Recruitment" />
+<meta name="twitter:description" content="Placing leaders who matter. A corporate recruitment firm built for the companies redrawing the lines of their industries." />
+<meta name="twitter:image" content="https://www.talacent.com.au/og-image.jpg" />
+
+<!-- FAVICON (inline SVG as data URI — no external file needed) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230A0A0A'/><text y='.9em' font-size='72' font-family='Arial Black,Arial' font-weight='900' fill='%235DCFF5' x='10'>T</text></svg>" />
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230A0A0A'/><text y='.9em' font-size='72' font-family='Arial Black,Arial' font-weight='900' fill='%235DCFF5' x='10'>T</text></svg>" />
+
+<!-- GOOGLE ANALYTICS (replace G-XXXXXXXXXX with your Measurement ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+
+  // Track page views when navigating between pages
+  function trackPage(page) {
+    if(typeof gtag !== 'undefined') {
+      gtag('event', 'page_view', { page_title: 'Talacent — ' + page.charAt(0).toUpperCase() + page.slice(1), page_path: '/' + page });
+    }
+  }
+
+  // Track form submission
+  function trackFormSubmit() {
+    if(typeof gtag !== 'undefined') {
+      gtag('event', 'generate_lead', { event_category: 'Contact Form', event_label: 'Search Enquiry' });
+    }
+  }
+
+  // Track Mia chat open
+  function trackChatOpen() {
+    if(typeof gtag !== 'undefined') {
+      gtag('event', 'chat_open', { event_category: 'Mia Chatbot', event_label: 'Chat Opened' });
+    }
+  }
+
+  // Track booking
+  function trackBooking(name, time) {
+    if(typeof gtag !== 'undefined') {
+      gtag('event', 'booking', { event_category: 'Mia Chatbot', event_label: 'Discovery Call Booked', value: 1 });
+    }
+  }
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -28,6 +92,7 @@ h1, h2, h3, h4, h5 {
 }
 p { max-width: 62ch; margin: 0; }
 a { color: inherit; text-decoration: none; }
+a[href^="tel"] { text-decoration: none !important; border-bottom: none !important; box-shadow: none !important; }
 img, svg { display: block; max-width: 100%; }
 button { font-family: 'Inter Tight', sans-serif; cursor: pointer; border: none; background: none; color: inherit; }
 input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A; }
@@ -567,7 +632,7 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
 .office-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #2FB5DF; margin-bottom: 0.65rem; display: block; }
 .office-city { font-size: clamp(1.6rem, 3vw, 2.25rem); margin-bottom: 0.85rem; }
 .office-addr { font-size: 0.95rem; line-height: 1.5; color: #1A1A1A; font-weight: 500; white-space: pre-line; }
-.office-tel { margin-top: 0.65rem; font-size: 0.88rem; font-weight: 600; border-bottom: 2px solid #0A0A0A; display: inline-block; padding-bottom: 2px; }
+.office-tel { margin-top: 0.65rem; font-size: 0.88rem; font-weight: 600; display: inline-block; padding-bottom: 2px; }
 
 /* FOOTER */
 .footer { background: #0A0A0A; color: #FFFFFF; padding: 5rem 0 2rem; }
@@ -676,11 +741,14 @@ a[href^="tel"] {
   white-space: nowrap;
 }
 a[href^="tel"]:hover { color: #2FB5DF; border-color: #2FB5DF; }
-.footer a[href^="tel"] { border-bottom-color: rgba(255,255,255,0.35); }
-.footer a[href^="tel"]:hover { color: #5DCFF5; border-bottom-color: #5DCFF5; }
-.contact-value a[href^="tel"] { border-bottom-width: 2px; }
-.office-tel a[href^="tel"] { border-bottom: 2px solid #0A0A0A; }
-.office-tel a[href^="tel"]:hover { color: #2FB5DF; border-color: #2FB5DF; }
+.footer a[href^="tel"] { color: rgba(255,255,255,0.7); text-decoration: none !important; border-bottom: none !important; }
+.footer a[href^="tel"]:hover { color: #5DCFF5; }
+.contact-value a { text-decoration: none !important; color: inherit; border-bottom: none !important; }
+.contact-value a:hover { color: #2FB5DF; }
+a[href^="tel"] { text-decoration: none !important; border-bottom: none !important; color: inherit; transition: color 0.2s; }
+a[href^="tel"]:hover { color: #2FB5DF !important; }
+.office-tel a[href^="tel"] { text-decoration: none !important; border-bottom: none !important; color: inherit; }
+.office-tel a[href^="tel"]:hover { color: #2FB5DF; }
 </style>
 </head>
 <body>
@@ -866,7 +934,7 @@ a[href^="tel"]:hover { color: #2FB5DF; border-color: #2FB5DF; }
         <div class="footer-socials">
           <a href="https://linkedin.com/company/talacent" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://x.com/talacent" target="_blank" rel="noopener">X</a>
-          <a href="mailto:info@talacent.com">Privacy</a>
+          <button onclick="showPage('privacy')" style="background:none;border:none;color:inherit;cursor:pointer;font-size:inherit;letter-spacing:inherit;text-transform:inherit;">Privacy</button>
         </div>
       </div>
     </div>
@@ -1031,7 +1099,7 @@ a[href^="tel"]:hover { color: #2FB5DF; border-color: #2FB5DF; }
         <div class="footer-col"><h5>Offices</h5><ul><li><button onclick="showPage('contact')">Brisbane</button></li><li><button onclick="showPage('contact')">Melbourne</button></li></ul></div>
         <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:info@talacent.com">info@talacent.com</a></li><li><a href="tel:1300191827">1300 191 827</a></li><li><button onclick="showPage('contact')">Client enquiries</button></li><li><button onclick="showPage('contact')">Candidate enquiries</button></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 Talacent Ltd. All rights reserved.</span><div class="footer-socials"><a href="#">LinkedIn</a><a href="#">X</a><a href="#">Privacy</a></div></div>
+      <div class="footer-bottom"><span>© 2026 Talacent Ltd. All rights reserved.</span><div class="footer-socials"><a href="#">LinkedIn</a><a href="#">X</a><button onclick="showPage('privacy')" style="background:none;border:none;color:inherit;cursor:pointer;font-size:inherit;letter-spacing:inherit;text-transform:inherit;">Privacy</button></div></div>
     </div>
   </footer>
 </div>
@@ -1173,7 +1241,7 @@ a[href^="tel"]:hover { color: #2FB5DF; border-color: #2FB5DF; }
         <div class="footer-col"><h5>Offices</h5><ul><li><button onclick="showPage('contact')">Brisbane</button></li><li><button onclick="showPage('contact')">Melbourne</button></li></ul></div>
         <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:info@talacent.com">info@talacent.com</a></li><li><a href="tel:1300191827">1300 191 827</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 Talacent Ltd. All rights reserved.</span><div class="footer-socials"><a href="#">LinkedIn</a><a href="#">X</a><a href="#">Privacy</a></div></div>
+      <div class="footer-bottom"><span>© 2026 Talacent Ltd. All rights reserved.</span><div class="footer-socials"><a href="#">LinkedIn</a><a href="#">X</a><button onclick="showPage('privacy')" style="background:none;border:none;color:inherit;cursor:pointer;font-size:inherit;letter-spacing:inherit;text-transform:inherit;">Privacy</button></div></div>
     </div>
   </footer>
 </div>
@@ -1278,7 +1346,7 @@ a[href^="tel"]:hover { color: #2FB5DF; border-color: #2FB5DF; }
         <div class="footer-col"><h5>Offices</h5><ul><li><button onclick="showPage('contact')">Brisbane</button></li><li><button onclick="showPage('contact')">Melbourne</button></li></ul></div>
         <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:info@talacent.com">info@talacent.com</a></li><li><a href="tel:1300191827">1300 191 827</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 Talacent Ltd. All rights reserved.</span><div class="footer-socials"><a href="#">LinkedIn</a><a href="#">X</a><a href="#">Privacy</a></div></div>
+      <div class="footer-bottom"><span>© 2026 Talacent Ltd. All rights reserved.</span><div class="footer-socials"><a href="#">LinkedIn</a><a href="#">X</a><button onclick="showPage('privacy')" style="background:none;border:none;color:inherit;cursor:pointer;font-size:inherit;letter-spacing:inherit;text-transform:inherit;">Privacy</button></div></div>
     </div>
   </footer>
 </div>
@@ -1302,9 +1370,9 @@ a[href^="tel"]:hover { color: #2FB5DF; border-color: #2FB5DF; }
     <div class="wrap">
       <div class="contact-grid">
         <div class="contact-info">
-          <div class="contact-block"><span class="contact-label">General enquiries</span><div class="contact-value">info@talacent.com</div></div>
-          <div class="contact-block"><span class="contact-label">Clients &amp; mandates</span><div class="contact-value">mo@talacent.com</div></div>
-          <div class="contact-block"><span class="contact-label">Media &amp; press</span><div class="contact-value">dan@talacent.com</div></div>
+          <div class="contact-block"><span class="contact-label">General enquiries</span><div class="contact-value"><a href="mailto:info@talacent.com">info@talacent.com</a></div></div>
+          <div class="contact-block"><span class="contact-label">Clients &amp; mandates</span><div class="contact-value"><a href="mailto:mo@talacent.com">mo@talacent.com</a></div></div>
+          <div class="contact-block"><span class="contact-label">Media &amp; press</span><div class="contact-value"><a href="mailto:dan@talacent.com">dan@talacent.com</a></div></div>
           <div class="contact-block"><span class="contact-label">Brisbane HQ</span><div class="contact-value"><a href="tel:1300191827" style="color:inherit;text-decoration:none">1300 191 827</a></div></div>
           <div class="contact-block"><span class="contact-label">Melbourne</span><div class="contact-value"><a href="tel:1300191827" style="color:inherit;text-decoration:none">1300 191 827</a></div></div>
         </div>
@@ -1512,6 +1580,7 @@ function showPage(page) {
     btn.classList.toggle('active', btn.getAttribute('data-page') === page);
   });
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  trackPage(page);
 }
 
 function toggleMenu() {
@@ -1529,38 +1598,184 @@ function submitForm() {
 
   function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; }
 
-  var subject = encodeURIComponent('New Search Enquiry — Talacent');
-  var body = encodeURIComponent(
-    'TALACENT — NEW SEARCH ENQUIRY\n' +
-    '================================\n\n' +
-    'YOUR DETAILS\n' +
-    'Name: ' + first + ' ' + val('f-last') + '\n' +
-    'Email: ' + email + '\n' +
-    'Phone: ' + val('f-phone') + '\n\n' +
-    'COMPANY CONTEXT\n' +
-    'Company: ' + val('f-company') + '\n' +
-    'Sector: ' + val('f-sector') + '\n' +
-    'Headcount: ' + val('f-headcount') + '\n' +
-    'Engagement type: ' + val('f-enquiry') + '\n\n' +
-    'ROLE DETAILS\n' +
-    'Seniority: ' + val('f-seniority') + '\n' +
-    'Function: ' + val('f-function') + '\n' +
-    'Location: ' + val('f-location') + '\n' +
-    'Hiring timeline: ' + val('f-urgency') + '\n\n' +
-    'BUDGET & SOURCE\n' +
-    'Package range: ' + val('f-budget') + '\n' +
-    'How they heard about us: ' + val('f-source') + '\n\n' +
-    'ADDITIONAL NOTES\n' +
-    val('f-message')
-  );
-  window.location.href = 'mailto:info@talacent.com?subject=' + subject + '&body=' + body;
+  var btn = document.getElementById('form-submit-btn');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
 
-  document.getElementById('contact-form-wrap').style.display = 'none';
-  document.getElementById('form-success').classList.add('show');
+  // Formspree endpoint — replace YOUR_FORM_ID with your Formspree form ID
+  fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      _subject: 'New Search Enquiry — Talacent',
+      name: first + ' ' + val('f-last'),
+      email: email,
+      phone: val('f-phone'),
+      company: val('f-company'),
+      sector: val('f-sector'),
+      headcount: val('f-headcount'),
+      engagement: val('f-enquiry'),
+      seniority: val('f-seniority'),
+      function_dept: val('f-function'),
+      location: val('f-location'),
+      timeline: val('f-urgency'),
+      budget: val('f-budget'),
+      source: val('f-source'),
+      message: val('f-message')
+    })
+  })
+  .then(function(res) {
+    if (res.ok) {
+      document.getElementById('contact-form-wrap').style.display = 'none';
+      document.getElementById('form-success').classList.add('show');
+      trackFormSubmit();
+    } else {
+      return res.json().then(function(data) {
+        btn.textContent = 'Send enquiry →';
+        btn.disabled = false;
+        alert('Something went wrong. Please email us directly at info@talacent.com');
+      });
+    }
+  })
+  .catch(function() {
+    // Fallback to mailto if fetch fails
+    var subject = encodeURIComponent('New Search Enquiry — Talacent');
+    var body = encodeURIComponent(
+      'TALACENT — NEW SEARCH ENQUIRY\n================================\n\n' +
+      'Name: ' + first + ' ' + val('f-last') + '\nEmail: ' + email + '\nPhone: ' + val('f-phone') + '\n\n' +
+      'Company: ' + val('f-company') + '\nSector: ' + val('f-sector') + '\nHeadcount: ' + val('f-headcount') + '\nEngagement: ' + val('f-enquiry') + '\n\n' +
+      'Seniority: ' + val('f-seniority') + '\nFunction: ' + val('f-function') + '\nLocation: ' + val('f-location') + '\nTimeline: ' + val('f-urgency') + '\n\n' +
+      'Budget: ' + val('f-budget') + '\nSource: ' + val('f-source') + '\n\nNotes:\n' + val('f-message')
+    );
+    window.location.href = 'mailto:info@talacent.com?subject=' + subject + '&body=' + body;
+    document.getElementById('contact-form-wrap').style.display = 'none';
+    document.getElementById('form-success').classList.add('show');
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function() { showPage('home'); });
 </script>
+
+<!-- ═══════════════════════════════════════════
+     PRIVACY PAGE
+════════════════════════════════════════════ -->
+<div class="page" id="page-privacy">
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Legal</div>
+      <h1 class="hero-title">PRIVACY POLICY.</h1>
+      <div class="hero-plain">
+        <p>How Talacent collects, uses, and protects your personal information.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section-white section-border-bottom">
+    <div class="wrap" style="max-width:800px;">
+
+      <div style="font-size:0.75rem;color:#6B7280;margin-bottom:2.5rem;">Last updated: January 2026</div>
+
+      <div style="display:flex;flex-direction:column;gap:2.5rem;">
+
+        <div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.75rem;">1. About This Policy</h3>
+          <p style="font-size:0.97rem;color:#1A1A1A;line-height:1.7;max-width:none;">Talacent Pty Ltd (ABN TBC) ("Talacent", "we", "us", "our") is committed to protecting the privacy of individuals in accordance with the Australian Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs). This policy explains how we collect, hold, use, and disclose your personal information.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.75rem;">2. What Information We Collect</h3>
+          <p style="font-size:0.97rem;color:#1A1A1A;line-height:1.7;max-width:none;">We may collect the following types of personal information:</p>
+          <ul style="font-size:0.97rem;color:#1A1A1A;line-height:1.8;max-width:none;padding-left:1.25rem;margin-top:0.5rem;">
+            <li>Contact details including name, email address, phone number, and company name</li>
+            <li>Professional information including employment history, qualifications, and career objectives</li>
+            <li>Information submitted through our contact form or chatbot (Mia)</li>
+            <li>Website usage data collected via Google Analytics (anonymised)</li>
+            <li>Correspondence and communications between you and Talacent</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.75rem;">3. How We Use Your Information</h3>
+          <p style="font-size:0.97rem;color:#1A1A1A;line-height:1.7;max-width:none;">We use your personal information to:</p>
+          <ul style="font-size:0.97rem;color:#1A1A1A;line-height:1.8;max-width:none;padding-left:1.25rem;margin-top:0.5rem;">
+            <li>Provide recruitment and talent advisory services</li>
+            <li>Respond to your enquiries and manage your engagement with Talacent</li>
+            <li>Match candidates with relevant executive roles</li>
+            <li>Communicate with you about relevant opportunities or services</li>
+            <li>Improve our website and services through anonymised analytics</li>
+            <li>Comply with our legal and regulatory obligations</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.75rem;">4. Disclosure of Information</h3>
+          <p style="font-size:0.97rem;color:#1A1A1A;line-height:1.7;max-width:none;">We will not sell, rent, or trade your personal information to third parties. We may disclose your information to prospective employers or clients only with your express consent, and to service providers who assist us in operating our business (such as Formspree for form processing and Google for analytics), subject to confidentiality obligations.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.75rem;">5. Chatbot Data (Mia)</h3>
+          <p style="font-size:0.97rem;color:#1A1A1A;line-height:1.7;max-width:none;">Our AI assistant Mia is powered by Anthropic's Claude API. Conversations with Mia may be processed by Anthropic in accordance with their privacy policy. We collect conversation data to qualify enquiries and book discovery calls. Booking details are sent to info@talacent.com. We do not retain chat logs beyond the active session.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.75rem;">6. Google Analytics</h3>
+          <p style="font-size:0.97rem;color:#1A1A1A;line-height:1.7;max-width:none;">We use Google Analytics to understand how visitors use our website. Google Analytics collects anonymised data about your visit, including pages viewed and time spent. This data does not identify you personally. You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" style="color:#2FB5DF;">Google Analytics Opt-out Browser Add-on</a>.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.75rem;">7. Data Security</h3>
+          <p style="font-size:0.97rem;color:#1A1A1A;line-height:1.7;max-width:none;">We take reasonable steps to protect your personal information from misuse, interference, loss, and unauthorised access. All form data is transmitted via HTTPS. We review our security practices regularly.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.75rem;">8. Your Rights</h3>
+          <p style="font-size:0.97rem;color:#1A1A1A;line-height:1.7;max-width:none;">You have the right to access, correct, or request deletion of your personal information. To exercise these rights, please contact us at <a href="mailto:info@talacent.com" style="color:#2FB5DF;">info@talacent.com</a>. We will respond within 30 days.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.75rem;">9. Contact</h3>
+          <p style="font-size:0.97rem;color:#1A1A1A;line-height:1.7;max-width:none;">For any privacy-related enquiries, please contact:<br><br>
+          <strong>Talacent Pty Ltd</strong><br>
+          Level 18, 288 Edward Street, Brisbane QLD 4000<br>
+          <a href="mailto:info@talacent.com" style="color:#2FB5DF;">info@talacent.com</a><br>
+          <a href="tel:1300191827" style="color:#2FB5DF;">1300 191 827</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <div class="wrap">
+      <div class="cta-inner">
+        <h2 class="cta-title">ANY QUESTIONS?</h2>
+        <div class="cta-actions">
+          <button class="btn btn-primary" onclick="showPage('contact')">Contact us →</button>
+          <button class="btn btn-ghost" onclick="showPage('home')">Back to home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand"><span class="wordmark wordmark-white">TALACENT<span class="dot"></span></span><p>A corporate recruitment firm placing senior talent globally.</p></div>
+        <div class="footer-col"><h5>Company</h5><ul><li><button onclick="showPage('about')">About</button></li><li><button onclick="showPage('services')">Services</button></li><li><button onclick="showPage('industries')">Industries</button></li><li><button onclick="showPage('contact')">Contact</button></li></ul></div>
+        <div class="footer-col"><h5>Offices</h5><ul><li><button onclick="showPage('contact')">Brisbane</button></li><li><button onclick="showPage('contact')">Melbourne</button></li></ul></div>
+        <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:info@talacent.com">info@talacent.com</a></li><li><a href="tel:1300191827">1300 191 827</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Talacent Ltd. All rights reserved.</span>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/company/talacent" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/talacent" target="_blank" rel="noopener">X</a>
+          <button onclick="showPage('privacy')" style="background:none;border:none;color:inherit;cursor:pointer;font-size:inherit;letter-spacing:inherit;text-transform:inherit;">Privacy</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
 
 <!-- ═══════════════════════════════════════════
      TALACENT AI CHATBOT — SALES PIPELINE
@@ -1917,7 +2132,11 @@ document.addEventListener('DOMContentLoaded', function() { showPage('home'); });
 </div>
 
 <script>
-// ── STATE ──────────────────────────────────────────────────────
+// ── CONFIG ────────────────────────────────────────────────────
+// To activate Mia, replace 'YOUR_ANTHROPIC_API_KEY' below with your key.
+// Get your key at: https://console.anthropic.com
+// IMPORTANT: In production, proxy API calls through your backend to keep the key secret.
+var TC_API_KEY = 'YOUR_ANTHROPIC_API_KEY';
 var tcState = {
   stage: 0,       // pipeline stage: 0-4
   open: false,
@@ -2207,7 +2426,7 @@ window.tcSubmitBooking = function() {
     'Lead data: ' + JSON.stringify(tcState.lead, null, 2)
   );
   window.open('mailto:info@talacent.com?subject=' + subject + '&body=' + body, '_blank');
-
+  trackBooking(name, time);
   setPipelineStage(4);
 
   // confirmation
@@ -2228,6 +2447,7 @@ window.tcOpenChat = function() {
   $('tc-chat-notif').style.display = 'none';
   $('tc-chat-window').classList.add('open');
   tcState.open = true;
+  trackChatOpen();
 
   if(tcState.history.length === 0) {
     setTimeout(function(){
