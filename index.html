@@ -694,18 +694,32 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
   .wordmark { font-size: 1.4rem !important; }
   .wordmark .dot { width: 8px !important; height: 8px !important; }
 
-  /* HERO */
+  /* HERO — all 5 pages */
   .hero { padding: clamp(2rem, 6vw, 3rem) 0 clamp(1.5rem, 4vw, 2.5rem); }
-  .hero-title { font-size: clamp(1.9rem, 8vw, 3rem); line-height: 0.95; margin-bottom: 1.25rem; }
+  .hero-title { font-size: clamp(1.75rem, 8vw, 2.75rem) !important; line-height: 1; margin-bottom: 1.25rem; }
   .hero-sub { grid-template-columns: 1fr; gap: 1.25rem; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 0.65rem; }
   .hero-plain p { font-size: 0.95rem; }
 
-  /* SECTION HEADS */
+  /* SECTION HEADS — all pages */
   .section-head { grid-template-columns: 1fr; gap: 0.75rem; margin-bottom: 1.75rem; }
-  .section-title { font-size: clamp(1.75rem, 8vw, 2.5rem); }
+  .section-title { font-size: clamp(1.5rem, 6.5vw, 2.25rem) !important; }
   .section-lede { font-size: 0.92rem; }
   .section { padding: clamp(2rem, 5vw, 3.5rem) 0; }
+
+  /* CTA BANNERS — all pages */
+  .cta-title { font-size: clamp(1.5rem, 6.5vw, 2.25rem) !important; }
+  .cta-inner { grid-template-columns: 1fr; gap: 1.25rem; }
+  .cta-actions { flex-direction: column; gap: 0.65rem; }
+
+  /* MANIFESTO — home & industries */
+  .manifesto-quote { font-size: clamp(1.35rem, 5.5vw, 1.85rem) !important; }
+  .manifesto-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .manifesto-body p { font-size: 0.92rem; }
+
+  /* TESTIMONIAL — home */
+  .testimonial-quote { font-size: clamp(1.1rem, 5vw, 1.6rem) !important; }
+  .testimonial-mark { font-size: 3rem; }
 
   /* BUTTONS */
   .btn { width: 100%; justify-content: center; font-size: 0.75rem; padding: 0.85rem 1.25rem; }
@@ -714,16 +728,6 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
   .service-row { grid-template-columns: 1fr auto; gap: 0.75rem; padding: 1.1rem 0; }
   .service-row-num { display: none; }
   .service-row-title { font-size: 1.1rem; }
-
-  /* MANIFESTO */
-  .manifesto-grid { grid-template-columns: 1fr; gap: 1.75rem; }
-  .manifesto-quote { font-size: clamp(1.5rem, 6vw, 2rem); }
-  .manifesto-body p { font-size: 0.92rem; }
-
-  /* CTA BANNER */
-  .cta-inner { grid-template-columns: 1fr; gap: 1.25rem; }
-  .cta-actions { flex-direction: column; gap: 0.65rem; }
-  .cta-title { font-size: clamp(1.75rem, 7vw, 2.5rem); }
 
   /* PARTNER CARDS — stack fully, no side-by-side */
   .cards-grid { grid-template-columns: 1fr !important; gap: 1rem; }
@@ -801,9 +805,11 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
 
 @media (max-width: 480px) {
   /* Tighter headings on very small screens */
-  .hero-title { font-size: clamp(2rem, 12vw, 3rem); }
-  .section-title { font-size: clamp(1.5rem, 9vw, 2rem); }
-  .cta-title { font-size: clamp(1.5rem, 8vw, 2rem); }
+  .hero-title { font-size: clamp(1.6rem, 7.5vw, 2.25rem) !important; line-height: 1; }
+  .section-title { font-size: clamp(1.35rem, 7vw, 1.85rem) !important; }
+  .cta-title { font-size: clamp(1.35rem, 7vw, 1.85rem) !important; }
+  .manifesto-quote { font-size: clamp(1.2rem, 5.5vw, 1.65rem) !important; }
+  .testimonial-quote { font-size: clamp(1.1rem, 5vw, 1.5rem) !important; }
 
   /* Single column everything */
   .stats-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
