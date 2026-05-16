@@ -6,7 +6,7 @@
 <title>TALACENT — Executive Recruitment</title>
 
 <!-- SEO META TAGS -->
-<meta name="description" content="Talacent is a corporate executive recruitment firm founded in Brisbane in 2024. We place senior leaders across Financial Services, Technology, Life Sciences, Industrial, Consumer & Retail, and Professional Services — across Australia and globally." />
+<meta name="description" content="Talacent is a corporate executive recruitment firm founded in Brisbane in 2024. We place senior leaders across Financial Services, Technology, Life Sciences, Industrial, Consumer & Retail, and Professional Services, across Australia and globally." />
 <meta name="keywords" content="executive recruitment, executive search, senior recruitment, Brisbane recruitment, Melbourne recruitment, C-suite search, board recruitment, talent advisory, RPO" />
 <meta name="author" content="Talacent" />
 <meta name="robots" content="index, follow" />
@@ -42,7 +42,7 @@
   // Track page views when navigating between pages
   function trackPage(page) {
     if(typeof gtag !== 'undefined') {
-      gtag('event', 'page_view', { page_title: 'Talacent — ' + page.charAt(0).toUpperCase() + page.slice(1), page_path: '/' + page });
+      gtag('event', 'page_view', { page_title: 'Talacent  -  ' + page.charAt(0).toUpperCase() + page.slice(1), page_path: '/' + page });
     }
   }
 
@@ -81,6 +81,8 @@ body {
   color: #0A0A0A;
   background: #FFFFFF;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 h1, h2, h3, h4, h5 {
   font-family: 'Archivo Black', Impact, 'Arial Black', Arial, sans-serif;
@@ -97,6 +99,10 @@ img, svg { display: block; max-width: 100%; }
 button { font-family: 'Inter Tight', sans-serif; cursor: pointer; border: none; background: none; color: inherit; }
 input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A; }
 ::selection { background: #5DCFF5; color: #0A0A0A; }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #2FB5DF;
+  outline-offset: 2px;
+}
 
 /* LAYOUT */
 .wrap {
@@ -269,6 +275,7 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
   padding-bottom: 0.3rem;
   transition: color 0.25s;
   color: #0A0A0A;
+  white-space: nowrap;
 }
 .arrow-link:hover { color: #2FB5DF; }
 .arrow-link-blue { color: #5DCFF5; }
@@ -296,7 +303,7 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
   border-bottom: 2px solid #0A0A0A;
   padding: clamp(3rem, 8vw, 6rem) 0 clamp(2.5rem, 5vw, 4.5rem);
 }
-.hero-title { font-size: clamp(3rem, 9vw, 8rem); margin-bottom: 2rem; }
+.hero-title { font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: 2rem; }
 .hero-sub {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -352,7 +359,7 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
   margin-bottom: 0.85rem;
   display: block;
 }
-.section-title { font-size: clamp(2rem, 4.5vw, 3.5rem); }
+.section-title { font-size: clamp(1.75rem, 3vw, 2.5rem); }
 .section-lede { font-size: 1.05rem; color: #6B7280; line-height: 1.55; max-width: 52ch; }
 .section-lede-dark { color: rgba(255,255,255,0.8); }
 
@@ -400,7 +407,7 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
   gap: 4rem;
   align-items: start;
 }
-.manifesto-quote { font-size: clamp(1.75rem, 3.5vw, 3rem); color: #FFFFFF; }
+.manifesto-quote { font-size: clamp(1.5rem, 2.5vw, 2.25rem); color: #FFFFFF; }
 .manifesto-body { display: flex; flex-direction: column; gap: 1.1rem; }
 .manifesto-body p { color: rgba(255,255,255,0.8); font-size: 1rem; line-height: 1.6; max-width: none; }
 
@@ -420,7 +427,7 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
   margin-bottom: 1.5rem;
   display: block;
 }
-.testimonial-quote { font-size: clamp(1.5rem, 2.8vw, 2.25rem); margin-bottom: 1.75rem; }
+.testimonial-quote { font-size: clamp(1.25rem, 2.2vw, 1.85rem); margin-bottom: 1.75rem; }
 .testimonial-name { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
 .testimonial-role { font-size: 0.78rem; color: #6B7280; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.25rem; }
 
@@ -432,7 +439,7 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
   padding: clamp(2.5rem, 6vw, 5rem) 0;
 }
 .cta-inner { display: grid; grid-template-columns: 1.5fr auto; gap: 2rem; align-items: end; }
-.cta-title { font-size: clamp(2.25rem, 5vw, 4rem); }
+.cta-title { font-size: clamp(1.75rem, 3.5vw, 3rem); }
 .cta-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 
 /* CARDS */
@@ -458,7 +465,7 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
   letter-spacing: -0.04em;
   text-transform: uppercase;
 }
-.card-body { padding: 1.4rem; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
+.card-body { padding: 1.5rem 1.5rem 1.75rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
 .card-role { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #2FB5DF; }
 .card-name { font-size: 1.25rem; }
 .card-bio { font-size: 0.88rem; color: #6B7280; line-height: 1.5; max-width: none; }
@@ -480,7 +487,7 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
 /* SPLIT */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
 .split-body { display: flex; flex-direction: column; gap: 1.1rem; }
-.split-body h2 { font-size: clamp(2rem, 4vw, 3.25rem); }
+.split-body h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); }
 .split-body p { font-size: 1rem; color: #1A1A1A; line-height: 1.6; max-width: none; }
 
 .feature-visual {
@@ -552,7 +559,7 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
   margin-bottom: 0.75rem;
 }
 .sd-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #2FB5DF; margin-bottom: 0.5rem; display: block; }
-.sd-title { font-size: clamp(1.75rem, 3.25vw, 2.75rem); margin-top: 0.5rem; }
+.sd-title { font-size: clamp(1.5rem, 2.5vw, 2.25rem); margin-top: 0.5rem; }
 .sd-body { font-size: 1rem; color: #1A1A1A; line-height: 1.6; max-width: none; }
 .sd-list-head { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #2FB5DF; margin: 1.25rem 0 0.75rem; display: block; }
 .sd-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; }
@@ -684,6 +691,10 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
   .service-row { grid-template-columns: 60px 1fr auto; }
   .service-row-desc { display: none; }
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  /* Search page two-col collapses on tablet */
+  #page-search .section > .wrap > div { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+  /* Contact grid collapses on tablet */
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 @media (max-width: 768px) {
   /* NAV */
@@ -773,11 +784,12 @@ input, textarea, select { font-family: 'Inter Tight', sans-serif; color: #0A0A0A
   .industry:nth-last-child(-n+2) { border-bottom: none; }
   .industry:nth-last-child(-n+3) { border-bottom: 1px solid #0A0A0A; }
 
-  /* CONTACT */
+  /* CONTACT & SEARCH PAGE */
   .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
   .contact-form { padding: 1.25rem; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .contact-value { font-size: 1rem; }
+  #page-search .wrap > div { grid-template-columns: 1fr !important; gap: 2rem !important; }
 
   /* OFFICES */
   .offices-grid { grid-template-columns: 1fr; }
@@ -889,7 +901,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
       <li><button onclick="showPage('industries')" data-page="industries">Industries</button></li>
       <li><button onclick="showPage('contact')" data-page="contact">Contact</button></li>
     </ul>
-    <button class="nav-cta" onclick="showPage('contact')">Start a search →</button>
+    <button class="nav-cta" onclick="showPage('search')">Start a search →</button>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -900,7 +912,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
     <button onclick="showPage('services');toggleMenu()">Services</button>
     <button onclick="showPage('industries');toggleMenu()">Industries</button>
     <button onclick="showPage('contact');toggleMenu()">Contact</button>
-    <button class="btn btn-primary btn-full" onclick="showPage('contact');toggleMenu()" style="margin-top:0.5rem">Start a search →</button>
+    <button class="btn btn-primary btn-full" onclick="showPage('search');toggleMenu()" style="margin-top:0.5rem">Start a search →</button>
   </div>
 </nav>
 
@@ -916,8 +928,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
       <div class="hero-sub">
         <p>A corporate recruitment firm built for the companies redrawing the lines of their industries.</p>
         <div class="hero-actions">
-          <button class="btn btn-primary" onclick="showPage('contact')">Start a search →</button>
-          <button class="arrow-link" onclick="showPage('services')">Explore services →</button>
+          <button class="arrow-link" onclick="showPage('services')">Explore services -></button>
         </div>
       </div>
     </div>
@@ -971,7 +982,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
         <button class="service-row" onclick="showPage('services')">
           <span class="service-row-num">— 05</span>
           <h3 class="service-row-title">RECRUITMENT PROCESS OUTSOURCING</h3>
-          <p class="service-row-desc">Embedded hiring teams scaled to your growth — quarterly, annually, or by project.</p>
+          <p class="service-row-desc">Embedded hiring teams scaled to your growth, quarterly, annually, or by project.</p>
           <span class="service-arrow">→</span>
         </button>
       </div>
@@ -1010,7 +1021,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
       <div class="cta-inner">
         <h2 class="cta-title">BEGIN A CONVERSATION.</h2>
         <div class="cta-actions">
-          <button class="btn btn-primary" onclick="showPage('contact')">Start a search →</button>
+          <button class="btn btn-primary" onclick="showPage('search')">Start a search →</button>
           <button class="btn btn-ghost" onclick="showPage('about')">About Talacent</button>
         </div>
       </div>
@@ -1023,7 +1034,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
         <div class="footer-brand">
           <span class="wordmark wordmark-white">TALACENT<span class="dot"></span></span>
           <p>A corporate recruitment firm placing senior leaders across Financial Services, Technology, and beyond.</p>
-          <button class="arrow-link arrow-link-blue" onclick="showPage('contact')">Start a search →</button>
+          <button class="arrow-link arrow-link-blue" onclick="showPage('search')">Start a search →</button>
         </div>
         <div class="footer-col">
           <h5>Company</h5>
@@ -1074,7 +1085,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
       <div class="eyebrow">About · Est. 2024</div>
       <h1 class="hero-title">TWO YEARS.<br>TWO PRACTICES.<br>ONE STANDARD.</h1>
       <div class="hero-plain">
-        <p>Talacent was founded in Brisbane by Mo Kara and Dan Martez — two practitioners who had grown impatient with how their industry operated. They built a firm to prove there was another way.</p>
+        <p>Talacent was founded in Brisbane by Mo Kara and Dan Martez, two practitioners who had grown impatient with how their industry operated. They built a firm to prove there was another way.</p>
       </div>
     </div>
   </header>
@@ -1203,7 +1214,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
       <div class="cta-inner">
         <h2 class="cta-title">WORK WITH A PARTNER WHO STAYS.</h2>
         <div class="cta-actions">
-          <button class="btn btn-primary" onclick="showPage('contact')">Start a conversation →</button>
+          <button class="btn btn-primary" onclick="showPage('search')">Start a conversation →</button>
           <button class="btn btn-ghost" onclick="showPage('services')">See services</button>
         </div>
       </div>
@@ -1216,7 +1227,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
         <div class="footer-brand">
           <span class="wordmark wordmark-white">TALACENT<span class="dot"></span></span>
           <p>A corporate recruitment firm placing senior leaders across Financial Services, Technology, and beyond.</p>
-          <button class="arrow-link arrow-link-blue" onclick="showPage('contact')">Start a search →</button>
+          <button class="arrow-link arrow-link-blue" onclick="showPage('search')">Start a search →</button>
         </div>
         <div class="footer-col"><h5>Company</h5><ul><li><button onclick="showPage('about')">About</button></li><li><button onclick="showPage('services')">Services</button></li><li><button onclick="showPage('industries')">Industries</button></li><li><button onclick="showPage('contact')">Contact</button></li></ul></div>
         <div class="footer-col"><h5>Offices</h5><ul><li><button onclick="showPage('contact')">Brisbane</button></li><li><button onclick="showPage('contact')">Melbourne</button></li></ul></div>
@@ -1263,7 +1274,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
     <div class="process-step">
       <span class="process-num">02</span>
       <h4 class="process-title">RESEARCH &amp; MAP</h4>
-      <p class="process-desc">Full market map — every plausible candidate, including those who aren't looking. Prioritised against your calibration.</p>
+      <p class="process-desc">Full market map covering every plausible candidate, including those who aren't looking. Prioritised against your calibration.</p>
     </div>
     <div class="process-step">
       <span class="process-num">03</span>
@@ -1311,7 +1322,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
             <h2 class="sd-title">INTERIM &amp; CONTRACT</h2>
           </div>
           <div>
-            <p class="sd-body">When the need is immediate — a transformation, a turnaround, a maternity cover at leadership level, or a gap while a permanent search is running — we deploy senior interim talent from a vetted network.</p>
+            <p class="sd-body">When the need is immediate, whether a transformation, a turnaround, a maternity cover at leadership level, or a gap while a permanent search is running, we deploy senior interim talent from a vetted network.</p>
             <span class="sd-list-head">Common engagements</span>
             <ul class="sd-list"><li>Interim CFO</li><li>PMI leads</li><li>Turnaround</li><li>Transformation</li><li>Function heads</li><li>Maternity cover</li><li>IPO readiness</li><li>Restructuring</li></ul>
           </div>
@@ -1349,7 +1360,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
       <div class="cta-inner">
         <h2 class="cta-title">DISCUSS A MANDATE.</h2>
         <div class="cta-actions">
-          <button class="btn btn-primary" onclick="showPage('contact')">Start a search →</button>
+          <button class="btn btn-primary" onclick="showPage('search')">Start a search →</button>
           <button class="btn btn-ghost" onclick="showPage('industries')">See sectors</button>
         </div>
       </div>
@@ -1359,7 +1370,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
   <footer class="footer">
     <div class="wrap">
       <div class="footer-grid">
-        <div class="footer-brand"><span class="wordmark wordmark-white">TALACENT<span class="dot"></span></span><p>A corporate recruitment firm placing senior leaders across Financial Services, Technology, and beyond.</p><button class="arrow-link arrow-link-blue" onclick="showPage('contact')">Start a search →</button></div>
+        <div class="footer-brand"><span class="wordmark wordmark-white">TALACENT<span class="dot"></span></span><p>A corporate recruitment firm placing senior leaders across Financial Services, Technology, and beyond.</p><button class="arrow-link arrow-link-blue" onclick="showPage('search')">Start a search →</button></div>
         <div class="footer-col"><h5>Company</h5><ul><li><button onclick="showPage('about')">About</button></li><li><button onclick="showPage('services')">Services</button></li><li><button onclick="showPage('industries')">Industries</button></li><li><button onclick="showPage('contact')">Contact</button></li></ul></div>
         <div class="footer-col"><h5>Offices</h5><ul><li><button onclick="showPage('contact')">Brisbane</button></li><li><button onclick="showPage('contact')">Melbourne</button></li></ul></div>
         <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:info@talacent.com">info@talacent.com</a></li><li><a href="tel:1300191827">1300 191 827</a></li></ul></div>
@@ -1464,7 +1475,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
   <footer class="footer">
     <div class="wrap">
       <div class="footer-grid">
-        <div class="footer-brand"><span class="wordmark wordmark-white">TALACENT<span class="dot"></span></span><p>A corporate recruitment firm placing senior leaders across Financial Services, Technology, and beyond.</p><button class="arrow-link arrow-link-blue" onclick="showPage('contact')">Start a search →</button></div>
+        <div class="footer-brand"><span class="wordmark wordmark-white">TALACENT<span class="dot"></span></span><p>A corporate recruitment firm placing senior leaders across Financial Services, Technology, and beyond.</p><button class="arrow-link arrow-link-blue" onclick="showPage('search')">Start a search →</button></div>
         <div class="footer-col"><h5>Company</h5><ul><li><button onclick="showPage('about')">About</button></li><li><button onclick="showPage('services')">Services</button></li><li><button onclick="showPage('industries')">Industries</button></li><li><button onclick="showPage('contact')">Contact</button></li></ul></div>
         <div class="footer-col"><h5>Offices</h5><ul><li><button onclick="showPage('contact')">Brisbane</button></li><li><button onclick="showPage('contact')">Melbourne</button></li></ul></div>
         <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:info@talacent.com">info@talacent.com</a></li><li><a href="tel:1300191827">1300 191 827</a></li></ul></div>
@@ -1648,7 +1659,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
           </div>
           <div class="form-success" id="form-success">
             <h3>ENQUIRY SENT.</h3>
-            <p>Thank you — a partner will be in touch within one working day. All conversations are handled in strict confidence.</p>
+            <p>Thank you. A partner will be in touch within one working day. All conversations are handled in strict confidence.</p>
           </div>
         </div>
       </div>
@@ -1684,7 +1695,7 @@ a[href^="tel"]:hover { color: #2FB5DF !important; }
   <footer class="footer">
     <div class="wrap">
       <div class="footer-grid">
-        <div class="footer-brand"><span class="wordmark wordmark-white">TALACENT<span class="dot"></span></span><p>A corporate recruitment firm placing senior leaders across Financial Services, Technology, and beyond.</p><button class="arrow-link arrow-link-blue" onclick="showPage('contact')">Start a search →</button></div>
+        <div class="footer-brand"><span class="wordmark wordmark-white">TALACENT<span class="dot"></span></span><p>A corporate recruitment firm placing senior leaders across Financial Services, Technology, and beyond.</p><button class="arrow-link arrow-link-blue" onclick="showPage('search')">Start a search →</button></div>
         <div class="footer-col"><h5>Company</h5><ul><li><button onclick="showPage('about')">About</button></li><li><button onclick="showPage('services')">Services</button></li><li><button onclick="showPage('industries')">Industries</button></li><li><button onclick="showPage('contact')">Contact</button></li></ul></div>
         <div class="footer-col"><h5>Offices</h5><ul><li><button onclick="showPage('contact')">Brisbane</button></li><li><button onclick="showPage('contact')">Melbourne</button></li></ul></div>
         <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:info@talacent.com">info@talacent.com</a></li><li><a href="tel:1300191827">1300 191 827</a></li><li><button onclick="showPage('contact')">Client enquiries</button></li><li><button onclick="showPage('contact')">Candidate enquiries</button></li></ul></div>
@@ -1722,15 +1733,15 @@ function submitForm() {
   function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; }
 
   var btn = document.getElementById('form-submit-btn');
-  btn.textContent = 'Sending…';
+  btn.textContent = 'Sending...';
   btn.disabled = true;
 
-  // Formspree endpoint — replace YOUR_FORM_ID with your Formspree form ID
-  fetch('https://formspree.io/f/YOUR_FORM_ID', {
+  // Formspree endpoint  -  replace meenybvp with your Formspree form ID
+  fetch('https://formspree.io/f/meenybvp', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
-      _subject: 'New Search Enquiry — Talacent',
+      _subject: 'New Search Enquiry  -  Talacent',
       name: first + ' ' + val('f-last'),
       email: email,
       phone: val('f-phone'),
@@ -1754,7 +1765,7 @@ function submitForm() {
       trackFormSubmit();
     } else {
       return res.json().then(function(data) {
-        btn.textContent = 'Send enquiry →';
+        btn.textContent = 'Send enquiry ->';
         btn.disabled = false;
         alert('Something went wrong. Please email us directly at info@talacent.com');
       });
@@ -1762,9 +1773,9 @@ function submitForm() {
   })
   .catch(function() {
     // Fallback to mailto if fetch fails
-    var subject = encodeURIComponent('New Search Enquiry — Talacent');
+    var subject = encodeURIComponent('New Search Enquiry  -  Talacent');
     var body = encodeURIComponent(
-      'TALACENT — NEW SEARCH ENQUIRY\n================================\n\n' +
+      'TALACENT  -  NEW SEARCH ENQUIRY\n================================\n\n' +
       'Name: ' + first + ' ' + val('f-last') + '\nEmail: ' + email + '\nPhone: ' + val('f-phone') + '\n\n' +
       'Company: ' + val('f-company') + '\nSector: ' + val('f-sector') + '\nHeadcount: ' + val('f-headcount') + '\nEngagement: ' + val('f-enquiry') + '\n\n' +
       'Seniority: ' + val('f-seniority') + '\nFunction: ' + val('f-function') + '\nLocation: ' + val('f-location') + '\nTimeline: ' + val('f-urgency') + '\n\n' +
@@ -1777,7 +1788,236 @@ function submitForm() {
 }
 
 document.addEventListener('DOMContentLoaded', function() { showPage('home'); });
+
+function submitSearchForm() {
+  var first = document.getElementById('sf-first').value.trim();
+  var email = document.getElementById('sf-email').value.trim();
+  if (!first) { alert('Please enter your first name.'); document.getElementById('sf-first').focus(); return; }
+  if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); document.getElementById('sf-email').focus(); return; }
+
+  function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+
+  var btn = document.getElementById('search-submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  fetch('https://formspree.io/f/meenybvp', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      _subject: 'New Search Enquiry  -  Talacent',
+      name: first + ' ' + val('sf-last'),
+      email: email,
+      phone: val('sf-phone'),
+      company: val('sf-company'),
+      sector: val('sf-sector'),
+      headcount: val('sf-headcount'),
+      engagement: val('sf-enquiry'),
+      seniority: val('sf-seniority'),
+      function_dept: val('sf-function'),
+      location: val('sf-location'),
+      timeline: val('sf-urgency'),
+      budget: val('sf-budget'),
+      source: val('sf-source'),
+      message: val('sf-message')
+    })
+  })
+  .then(function(res) {
+    if (res.ok) {
+      document.getElementById('search-form-wrap').style.display = 'none';
+      document.getElementById('search-form-success').classList.add('show');
+      trackFormSubmit();
+    } else {
+      btn.textContent = 'Send enquiry ->';
+      btn.disabled = false;
+      alert('Something went wrong. Please email us at info@talacent.com');
+    }
+  })
+  .catch(function() {
+    var subject = encodeURIComponent('New Search Enquiry  -  Talacent');
+    var body = encodeURIComponent(
+      'TALACENT  -  NEW SEARCH ENQUIRY\n================================\n\n' +
+      'Name: ' + first + ' ' + val('sf-last') + '\nEmail: ' + email + '\nPhone: ' + val('sf-phone') + '\n\n' +
+      'Company: ' + val('sf-company') + '\nSector: ' + val('sf-sector') + '\nHeadcount: ' + val('sf-headcount') + '\nEngagement: ' + val('sf-enquiry') + '\n\n' +
+      'Seniority: ' + val('sf-seniority') + '\nFunction: ' + val('sf-function') + '\nLocation: ' + val('sf-location') + '\nTimeline: ' + val('sf-urgency') + '\n\n' +
+      'Budget: ' + val('sf-budget') + '\nSource: ' + val('sf-source') + '\n\nNotes:\n' + val('sf-message')
+    );
+    window.location.href = 'mailto:info@talacent.com?subject=' + subject + '&body=' + body;
+    document.getElementById('search-form-wrap').style.display = 'none';
+    document.getElementById('search-form-success').classList.add('show');
+  });
+}
 </script>
+
+<!-- ═══════════════════════════════════════════
+     SEARCH PAGE — STANDALONE FORM
+════════════════════════════════════════════ -->
+<div class="page" id="page-search">
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Start a Search</div>
+      <h1 class="hero-title">LET'S FIND<br>YOUR NEXT<br>LEADER.</h1>
+      <div class="hero-plain">
+        <p>Tell us about the role and we'll match you with the right partner. A response within one working day, guaranteed.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section-white section-border-bottom">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start;">
+
+        <!-- LEFT — WHY TALACENT -->
+        <div style="display:flex;flex-direction:column;gap:2rem;">
+          <div>
+            <div class="eyebrow eyebrow-nobar" style="margin-bottom:1rem;">Why Talacent</div>
+            <div style="display:flex;flex-direction:column;gap:1.5rem;">
+              <div style="border-left:3px solid #5DCFF5;padding-left:1.1rem;">
+                <div style="font-family:'Archivo Black',sans-serif;font-size:0.92rem;letter-spacing:-0.02em;text-transform:uppercase;margin-bottom:0.3rem;">Partner-led from day one</div>
+                <p style="font-size:0.88rem;color:#6B7280;line-height:1.55;max-width:none;">The person you speak with is the person who runs your search. No handoffs, no account managers.</p>
+              </div>
+              <div style="border-left:3px solid #5DCFF5;padding-left:1.1rem;">
+                <div style="font-family:'Archivo Black',sans-serif;font-size:0.92rem;letter-spacing:-0.02em;text-transform:uppercase;margin-bottom:0.3rem;">42 days to shortlist</div>
+                <p style="font-size:0.88rem;color:#6B7280;line-height:1.55;max-width:none;">Average time from brief to a shortlist of qualified, interested candidates ready for interview.</p>
+              </div>
+              <div style="border-left:3px solid #5DCFF5;padding-left:1.1rem;">
+                <div style="font-family:'Archivo Black',sans-serif;font-size:0.92rem;letter-spacing:-0.02em;text-transform:uppercase;margin-bottom:0.3rem;">94% one-year retention</div>
+                <p style="font-size:0.88rem;color:#6B7280;line-height:1.55;max-width:none;">Our placed leaders stay. We don't measure success at offer stage. We measure it a year later.</p>
+              </div>
+              <div style="border-left:3px solid #5DCFF5;padding-left:1.1rem;">
+                <div style="font-family:'Archivo Black',sans-serif;font-size:0.92rem;letter-spacing:-0.02em;text-transform:uppercase;margin-bottom:0.3rem;">Strict confidence</div>
+                <p style="font-size:0.88rem;color:#6B7280;line-height:1.55;max-width:none;">Every enquiry is handled in complete confidence. We never share client details or publish engagement lists.</p>
+              </div>
+            </div>
+          </div>
+          <div style="background:#0A0A0A;padding:1.5rem;">
+            <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#5DCFF5;margin-bottom:0.75rem;">Prefer to call?</div>
+            <div style="font-family:'Archivo Black',sans-serif;font-size:1.4rem;letter-spacing:-0.03em;text-transform:uppercase;color:#fff;margin-bottom:0.35rem;"><a href="tel:1300191827" style="color:#fff;text-decoration:none;">1300 191 827</a></div>
+            <div style="font-size:0.82rem;color:rgba(255,255,255,0.6);">Mon–Fri, 8am–6pm AEST</div>
+          </div>
+        </div>
+
+        <!-- RIGHT — FORM -->
+        <div>
+          <div class="contact-form" id="search-form-wrap">
+            <div class="eyebrow eyebrow-nobar" style="margin-bottom:1.5rem;">Your details</div>
+
+            <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#2FB5DF;margin-bottom:0.85rem;">Your Details</div>
+            <div class="form-row">
+              <div class="form-field"><label class="form-label" for="sf-first">First name</label><input class="form-input" type="text" id="sf-first" name="firstname" autocomplete="given-name" /></div>
+              <div class="form-field"><label class="form-label" for="sf-last">Last name</label><input class="form-input" type="text" id="sf-last" name="lastname" autocomplete="family-name" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field"><label class="form-label" for="sf-email">Email</label><input class="form-input" type="email" id="sf-email" name="email" autocomplete="email" /></div>
+              <div class="form-field"><label class="form-label" for="sf-phone">Phone</label><input class="form-input" type="tel" id="sf-phone" name="phone" autocomplete="tel" /></div>
+            </div>
+
+            <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#2FB5DF;margin-bottom:0.85rem;margin-top:0.5rem;">Company Context</div>
+            <div class="form-row">
+              <div class="form-field"><label class="form-label" for="sf-company">Company name</label><input class="form-input" type="text" id="sf-company" name="company" autocomplete="organization" /></div>
+              <div class="form-field"><label class="form-label" for="sf-sector">Industry sector</label>
+                <select class="form-select" id="sf-sector" name="sector">
+                  <option value="">Select sector</option>
+                  <option>Financial Services</option><option>Technology</option><option>Life Sciences</option>
+                  <option>Industrial</option><option>Consumer &amp; Retail</option><option>Professional Services</option><option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field"><label class="form-label" for="sf-headcount">Company headcount</label>
+                <select class="form-select" id="sf-headcount" name="headcount">
+                  <option value="">Select range</option>
+                  <option>1 to 50</option><option>51 to 200</option><option>201 to 500</option>
+                  <option>501 to 1,000</option><option>1,000 to 5,000</option><option>5,000+</option>
+                </select>
+              </div>
+              <div class="form-field"><label class="form-label" for="sf-enquiry">Type of engagement</label>
+                <select class="form-select" id="sf-enquiry" name="enquiry">
+                  <option value="">Select one</option>
+                  <option>Executive Search</option><option>Permanent Recruitment</option>
+                  <option>Interim &amp; Contract</option><option>Talent Advisory</option><option>RPO</option><option>Candidate enquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#2FB5DF;margin-bottom:0.85rem;margin-top:0.5rem;">Role Details</div>
+            <div class="form-row">
+              <div class="form-field"><label class="form-label" for="sf-seniority">Seniority level</label>
+                <select class="form-select" id="sf-seniority" name="seniority">
+                  <option value="">Select level</option>
+                  <option>Board / NED</option><option>C-Suite (CEO, CFO, CTO, COO etc)</option>
+                  <option>VP / Executive Director</option><option>Director</option><option>Senior Manager / Head of</option><option>Manager</option>
+                </select>
+              </div>
+              <div class="form-field"><label class="form-label" for="sf-function">Function / department</label>
+                <select class="form-select" id="sf-function" name="function">
+                  <option value="">Select function</option>
+                  <option>General Management</option><option>Finance &amp; Accounting</option><option>Technology &amp; Engineering</option>
+                  <option>Sales &amp; Business Development</option><option>Marketing &amp; Communications</option>
+                  <option>Operations &amp; Strategy</option><option>Legal &amp; Compliance</option><option>People &amp; Culture</option><option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field"><label class="form-label" for="sf-location">Role location</label><input class="form-input" type="text" id="sf-location" name="location" placeholder="City or state" /></div>
+              <div class="form-field"><label class="form-label" for="sf-urgency">Hiring timeline</label>
+                <select class="form-select" id="sf-urgency" name="urgency">
+                  <option value="">Select timeline</option>
+                  <option>Immediately (within 4 weeks)</option><option>1 to 3 months</option>
+                  <option>3 to 6 months</option><option>6+ months / planning ahead</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#2FB5DF;margin-bottom:0.85rem;margin-top:0.5rem;">Budget &amp; Source</div>
+            <div class="form-row">
+              <div class="form-field"><label class="form-label" for="sf-budget">Package range (AUD)</label>
+                <select class="form-select" id="sf-budget" name="budget">
+                  <option value="">Select range</option>
+                  <option>Under $150k</option><option>$150k to $250k</option><option>$250k to $400k</option>
+                  <option>$400k to $600k</option><option>$600k to $1m</option><option>$1m+</option><option>Prefer not to say</option>
+                </select>
+              </div>
+              <div class="form-field"><label class="form-label" for="sf-source">How did you hear about us?</label>
+                <select class="form-select" id="sf-source" name="source">
+                  <option value="">Select one</option>
+                  <option>Referral from a colleague</option><option>LinkedIn</option><option>Google search</option>
+                  <option>We've worked together before</option><option>Industry event</option><option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="sf-message">Anything else we should know?</label>
+              <textarea class="form-textarea" id="sf-message" name="message" placeholder="Context about the role, team, or situation that will help us hit the ground running…"></textarea>
+            </div>
+
+            <button class="btn btn-primary btn-full" id="search-submit-btn" onclick="submitSearchForm()">Send enquiry →</button>
+            <p class="form-note">All enquiries are handled in strict confidence. A partner will respond within one working day.</p>
+          </div>
+          <div class="form-success" id="search-form-success">
+            <h3>ENQUIRY SENT.</h3>
+            <p>Thank you. A partner will be in touch within one working day. All conversations are handled in strict confidence.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand"><span class="wordmark wordmark-white">TALACENT<span class="dot"></span></span><p>A corporate recruitment firm placing senior leaders across Financial Services, Technology, and beyond.</p></div>
+        <div class="footer-col"><h5>Company</h5><ul><li><button onclick="showPage('about')">About</button></li><li><button onclick="showPage('services')">Services</button></li><li><button onclick="showPage('industries')">Industries</button></li><li><button onclick="showPage('contact')">Contact</button></li></ul></div>
+        <div class="footer-col"><h5>Offices</h5><ul><li><button onclick="showPage('contact')">Brisbane</button></li><li><button onclick="showPage('contact')">Melbourne</button></li></ul></div>
+        <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:info@talacent.com">info@talacent.com</a></li><li><a href="tel:1300191827">1300 191 827</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Talacent Ltd. All rights reserved.</span><div class="footer-socials"><a href="https://linkedin.com/company/talacent" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/talacent" target="_blank" rel="noopener">X</a><button onclick="showPage('privacy')" style="background:none;border:none;color:inherit;cursor:pointer;font-size:inherit;letter-spacing:inherit;text-transform:inherit;">Privacy</button></div></div>
+    </div>
+  </footer>
+</div>
 
 <!-- ═══════════════════════════════════════════
      PRIVACY PAGE
@@ -2255,7 +2495,7 @@ document.addEventListener('DOMContentLoaded', function() { showPage('home'); });
 </div>
 
 <script>
-// ── CONFIG ────────────────────────────────────────────────────
+// -- CONFIG ----------------------------------------------------
 // To activate Mia, replace 'YOUR_ANTHROPIC_API_KEY' below with your key.
 // Get your key at: https://console.anthropic.com
 // IMPORTANT: In production, proxy API calls through your backend to keep the key secret.
@@ -2272,7 +2512,7 @@ var tcState = {
 
 var STAGES = ['Qualify','Scope','Fit','Book','Confirm'];
 
-// System prompt — sales-focused, knows Talacent deeply
+// System prompt  -  sales-focused, knows Talacent deeply
 var SYSTEM = `Your name is Mia. You are a senior recruitment consultant at Talacent, embedded on the Talacent website to help visitors find the right solution. Talacent is a premium corporate recruitment firm founded in Brisbane in 2011. They have two Australian offices (Brisbane HQ and Melbourne). They place senior leaders across 6 practices: Financial Services, Technology, Life Sciences, Industrial, Construction, Professional Services. Their 5 services are: Executive Search (retained, 12-16 weeks, C-suite/board/VP), Permanent Recruitment (retained, 6-10 weeks, VP/Director/function heads), Interim & Contract (rapid, 2-4 weeks, transformation/turnaround), Talent Advisory (project-scoped, compensation/succession/org design), and RPO (embedded hiring teams, quarterly).
 
 Your job is to qualify prospects and guide them toward booking a discovery call with a Talacent partner. Be warm, confident, conversational, and expert. Never mention that you are an AI, a bot, or any automated system. Never use dashes, bullet points, or structured formatting in your responses. Write in plain natural sentences only, as a real person would in a chat. Never be pushy.
@@ -2291,7 +2531,7 @@ Never start a message with a dash or bullet. Never use em dashes or hyphens to s
 Current lead data collected so far: {LEAD_DATA}
 Current pipeline stage: {STAGE}`;
 
-// ── DOM HELPERS ────────────────────────────────────────────────
+// -- DOM HELPERS ------------------------------------------------
 function $(id) { return document.getElementById(id); }
 function now() { var d = new Date(); return d.getHours().toString().padStart(2,'0')+':'+d.getMinutes().toString().padStart(2,'0'); }
 
@@ -2353,18 +2593,18 @@ function showBookingForm() {
     <div><label>Preferred time</label>
       <select id="bk-time">
         <option value="">Select a slot</option>
-        <option>Monday 9–10am AEST</option>
-        <option>Monday 2–3pm AEST</option>
-        <option>Tuesday 10–11am AEST</option>
-        <option>Tuesday 3–4pm AEST</option>
-        <option>Wednesday 9–10am AEST</option>
-        <option>Wednesday 1–2pm AEST</option>
-        <option>Thursday 10–11am AEST</option>
-        <option>Thursday 2–3pm AEST</option>
-        <option>Friday 9–10am AEST</option>
+        <option>Monday 9 to 10am AEST</option>
+        <option>Monday 2 to 3pm AEST</option>
+        <option>Tuesday 10 to 11am AEST</option>
+        <option>Tuesday 3 to 4pm AEST</option>
+        <option>Wednesday 9 to 10am AEST</option>
+        <option>Wednesday 1 to 2pm AEST</option>
+        <option>Thursday 10 to 11am AEST</option>
+        <option>Thursday 2 to 3pm AEST</option>
+        <option>Friday 9 to 10am AEST</option>
       </select>
     </div>
-    <button class="tc-booking-submit" onclick="tcSubmitBooking()">Confirm booking →</button>
+    <button class="tc-booking-submit" onclick="tcSubmitBooking()">Confirm booking -></button>
   `;
   wrap.appendChild(form);
   msgs.appendChild(wrap);
@@ -2387,7 +2627,7 @@ function setQuickReplies(options, highlight) {
   });
 }
 
-// ── API CALL ───────────────────────────────────────────────────
+// -- API CALL ---------------------------------------------------
 async function tcCallClaude(userMsg) {
   tcState.history.push({ role: 'user', content: userMsg });
 
@@ -2418,7 +2658,7 @@ async function tcCallClaude(userMsg) {
   return text;
 }
 
-// ── PARSE & RENDER BOT RESPONSE ────────────────────────────────
+// -- PARSE & RENDER BOT RESPONSE --------------------------------
 function tcRenderBotResponse(raw) {
   clearQuickReplies();
 
@@ -2450,7 +2690,7 @@ function tcRenderBotResponse(raw) {
   else if(tcState.stage === 2 && (lower.indexOf('book') !== -1 || lower.indexOf('call') !== -1 || lower.indexOf('partner') !== -1 || lower.indexOf('schedule') !== -1)) setPipelineStage(3);
 }
 
-// ── SEND & RECEIVE ─────────────────────────────────────────────
+// -- SEND & RECEIVE ---------------------------------------------
 async function tcBotReply(userMsg) {
   if(tcState.typing) return;
   tcState.typing = true;
@@ -2511,7 +2751,7 @@ function tcLearnFromMessage(msg) {
   });
 }
 
-// ── BOOKING SUBMISSION ────────────────────────────────────────
+// -- BOOKING SUBMISSION ----------------------------------------
 window.tcSubmitBooking = function() {
   var name = $('bk-name') ? $('bk-name').value.trim() : '';
   var email = $('bk-email') ? $('bk-email').value.trim() : '';
@@ -2539,9 +2779,9 @@ window.tcSubmitBooking = function() {
   addMessage('user', 'I\'d like to book: ' + time);
 
   // 1. Internal notification to Talacent team
-  var internalSubject = encodeURIComponent('New Discovery Call Booking — Mia');
+  var internalSubject = encodeURIComponent('New Discovery Call Booking  -  Mia');
   var internalBody = encodeURIComponent(
-    'DISCOVERY CALL BOOKING — TALACENT MIA\n' +
+    'DISCOVERY CALL BOOKING  -  TALACENT MIA\n' +
     '=====================================\n\n' +
     'Name: ' + name + '\n' +
     'Email: ' + email + '\n' +
@@ -2557,7 +2797,7 @@ window.tcSubmitBooking = function() {
 
   // 2. Confirmation email to the user
   setTimeout(function() {
-    var confirmSubject = encodeURIComponent('Your Discovery Call with Talacent — ' + time);
+    var confirmSubject = encodeURIComponent('Your Discovery Call with Talacent  -  ' + time);
     var confirmBody = encodeURIComponent(
       'Hi ' + name.split(' ')[0] + ',\n\n' +
       'Thank you for booking a discovery call with Talacent.\n\n' +
@@ -2580,7 +2820,7 @@ window.tcSubmitBooking = function() {
 
   // confirmation
   setTimeout(function(){
-    addMessage('bot', '✓ <strong>Confirmed.</strong> Your call has been booked for <strong>' + time + '</strong>.\n\nA confirmation email is on its way to <strong>' + email + '</strong>. One of our partners will be fully briefed before the call.\n\nWe look forward to speaking with you, ' + name.split(' ')[0] + '.');
+    addMessage('bot', '(done) <strong>Confirmed.</strong> Your call has been booked for <strong>' + time + '</strong>.\n\nA confirmation email is on its way to <strong>' + email + '</strong>. One of our partners will be fully briefed before the call.\n\nWe look forward to speaking with you, ' + name.split(' ')[0] + '.');
     clearQuickReplies();
     // update pipeline to done
     for(var i=0;i<5;i++){
@@ -2590,7 +2830,7 @@ window.tcSubmitBooking = function() {
   }, 600);
 };
 
-// ── OPEN / CLOSE ──────────────────────────────────────────────
+// -- OPEN / CLOSE ----------------------------------------------
 window.tcOpenChat = function() {
   $('tc-chat-teaser').style.display = 'none';
   $('tc-chat-notif').style.display = 'none';
@@ -2619,7 +2859,7 @@ setTimeout(function(){
   if(t) t.style.display = 'none';
 }, 8000);
 
-// ── SCROLL HIDE / SHOW ────────────────────────────────────────
+// -- SCROLL HIDE / SHOW ----------------------------------------
 (function() {
   var scrollTimer = null;
   var bubble = $('tc-chat-bubble');
