@@ -435,19 +435,51 @@ body::after {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .nav { padding: 1.25rem 1.5rem; }
-  .main { padding: 2.5rem 1.5rem; }
-  .footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1.25rem 1.5rem; }
+  .nav {
+    padding: 1.1rem 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+  .nav-tag { font-size: 0.6rem; }
+  .wordmark { font-size: 1.3rem; }
+  .main { padding: 2rem 1.25rem 2.5rem; }
+  .headline { font-size: clamp(2.5rem, 13vw, 4.5rem); margin-bottom: 1.5rem; }
+  .subline { font-size: 0.92rem; margin-bottom: 2rem; }
+  .launch-strip { margin-bottom: 1.5rem; }
+  .countdown { gap: clamp(0.65rem, 3.5vw, 1.25rem); margin-bottom: 2rem; }
   .countdown-unit:not(:last-child)::after { display: none; }
-  .countdown { gap: clamp(0.75rem, 4vw, 1.5rem); }
+  .divider { margin-bottom: 2rem; }
+  .notify { max-width: 100%; }
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 1.1rem 1.25rem;
+  }
   .deco-line, .deco-line-2 { display: none; }
 }
 
 @media (max-width: 480px) {
-  .countdown-num { font-size: clamp(2rem, 12vw, 3rem); }
-  .notify-row { flex-direction: column; }
-  .notify-btn { width: 100%; padding: 0.85rem; }
-  .footer-contact { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+  .nav { padding: 1rem 1.1rem; }
+  .main { padding: 1.75rem 1.1rem 2rem; }
+  .wordmark { font-size: 1.2rem; }
+  .headline { font-size: clamp(2.2rem, 14vw, 3.5rem); line-height: 0.9; }
+  .eyebrow { font-size: 0.6rem; margin-bottom: 1.25rem; }
+  .launch-strip { padding: 0.4rem 0.8rem; margin-bottom: 1.25rem; }
+  .launch-strip span { font-size: 0.58rem; }
+  .countdown-num { font-size: clamp(2rem, 14vw, 3rem); }
+  .countdown-label { font-size: 0.55rem; }
+  .notify-row { flex-direction: column; border: none; gap: 0.5rem; }
+  .notify-input {
+    border: 1.5px solid rgba(255,255,255,0.15);
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+  }
+  .notify-input:focus { border-color: var(--cyan); outline: none; }
+  .notify-btn { width: 100%; padding: 0.9rem; font-size: 0.75rem; border: none; }
+  .footer-contact { flex-direction: column; gap: 0.45rem; align-items: flex-start; }
+  .footer-copy { font-size: 0.6rem; }
 }
 </style>
 </head>
